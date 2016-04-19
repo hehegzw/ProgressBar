@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cus="http://schemas.android.com/apk/res/com.example.gzw.myapplication"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        style="@style/ProgressBarStyle"
+        android:background="@drawable/shape_pregressbar_bg"
+        android:max="100"
+        android:progress="50"/>
+    <cn.gzw.progressbar.MyCircleView
+        android:id="@+id/circlePro"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        cus:firstColor="#f00"
+        cus:secondColor="#0f0"
+        cus:speed="30"
+        cus:circleSize="10dp"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>
