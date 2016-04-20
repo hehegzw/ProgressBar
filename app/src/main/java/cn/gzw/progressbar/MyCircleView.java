@@ -65,6 +65,7 @@ public class MyCircleView extends View {
         this.progress = percent*3.6f;
         this.present = percent;
         this.text = percent+"%";
+        if(percent == 100) isRunning = false;
     }
 
     @Override
@@ -87,18 +88,6 @@ public class MyCircleView extends View {
         int baseline = (int) (getHeight()/2+(fontMetrics.descent - fontMetrics.ascent)/2 - fontMetrics.descent);
         canvas.drawText(text,centre,baseline,tPaint);
 
-        //canvas.drawText();
-//        if(!isNext){
-//            paint.setColor(firstColor);
-//            canvas.drawCircle(centre,centre,radius,paint);
-//            paint.setColor(scendColor);
-//            canvas.drawArc(oval,-90,currentProgress,false,paint);
-//        }else{
-//            paint.setColor(scendColor);
-//            canvas.drawCircle(centre,centre,radius,paint);
-//            paint.setColor(firstColor);
-//            canvas.drawArc(oval,-90,currentProgress,false,paint);
-//        }
     }
 
     @Override
